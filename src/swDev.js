@@ -7,9 +7,9 @@ export default function swDev(){
     
     if("serviceWorker" in navigator){
         navigator.serviceWorker.register(swUrl).then((response)=>{
-            console.log(response,"response")
+            // console.log(response,"response")
         }).catch(function(e){
-            console.log(e,"error")
+            // console.log(e,"error")
         }
         )
     }

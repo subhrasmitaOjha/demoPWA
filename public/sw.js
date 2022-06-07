@@ -1,7 +1,8 @@
-// console.warn("service worker from public ")
+ console.warn("service worker from public ")
 let cachedata="aapV1";
 
 this.addEventListener("install",(event)=>{
+    
     event.waitUntil(
         caches.open(cachedata).then((cache)=>{
             cache.addAll([
@@ -18,7 +19,9 @@ this.addEventListener("install",(event)=>{
                 "/ws",
                 "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
                 "/",
-                "/users"
+                "/users",
+                "http://localhost:3000/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+                "https://www.gstatic.com/webp/gallery3/1.png"
             ])
         })
     )
